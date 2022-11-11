@@ -8,5 +8,8 @@ synth-yosys:
 verilog2spice:
 	./synth2spice.sh
 
+simulate:
+	./simulate.sh
+
 clean:
-	rm -f ./synthesis/*
+	rm -f ./synthesis/* && rm -f ./simulations/*
