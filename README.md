@@ -11,12 +11,19 @@ The skywater 130nm PDK needs to be install into the `/usr/local/share/pdk` direc
 (check [this](https://github.com/RTimothyEdwards/open_pdks) repo). Otherwise, the scripts won't work.
 
 ## Example
-To synthesize the verilog counter `upcounter.v` and create a spice netlist aswell just do
+To synthesize the verilog counter `upcounter.v` and create a spice netlist aswell just do:
 ```
 make
 ```
-If you want to do only the `yosys` synthesis, you can call
+If you want to do only the `yosys` synthesis, you can call:
 ```
 make synth-yosys
 ```
 The file `synth.spice` contains the spice netlist version, mapped to the standard cells of the `sky130` PDK.
+
+## Simulate using iverilog & GTKwave
+A bonus feature is to simulate the verilog source code by calling:
+```
+make simulate
+```
+This will only work on MacOS with GTKwave installed as an app.
